@@ -6,13 +6,13 @@ from .models.product import Product
 from django.utils.safestring import mark_safe
 
 class CustomerAdmin(admin.ModelAdmin):
-    list_display = ['first_name', 'last_name', 'phone', 'email', 'password']
+    list_display = ['first_name', 'last_name', 'phone', 'email', 'password', 'address']
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ["name", ]
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ['customer', 'quantity', 'phone', 'address', 'date', 'status', 'price']
+    list_display = ['product', 'customer', 'quantity', 'phone', 'address', 'date', 'status', 'price']
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['name','price', 'category', 'description', 'image', 'show_image']
